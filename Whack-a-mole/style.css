@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background: url('img/background.png');
+}
+.game{
+    width: 1000px;
+    height: 100%;
+
+    padding-top: 250px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.intro,
+.end{
+    width: 500px;
+    height: 300px;
+
+    margin: 0 auto;
+    border-radius: 20px;
+    background: url('img/wooden-board.png');
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    /* animation: hide-board 1s infinite; */
+}
+.end{
+    top: -600px;
+}
+@keyframes hide-board{
+    0% {top: 0}
+    100% {top: -600px}
+}
+@keyframes show-board{
+    0% {top: -600px}
+    100% {top: 0}
+}
+
+.intro h3,
+.end h3{
+    font-size: 35px;
+    color: white;
+
+    position: absolute;
+    top: 95px;
+
+}
+.end h3{
+    top: 70px;
+}
+#end-score{
+    color: white;
+    font-size: 24px;
+}
+.start{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.start-game{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    font-size: 24px;
+
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    transition: 0.05s;
+
+    position: absolute;
+    bottom: 40px;
+}
+.start-game:hover{
+    font-size: 26px;
+    color: rgb(231, 231, 231);
+}
+
+.play{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.count-down{
+    text-align: center;
+
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px gray;
+}
+.play-score{
+    text-align: center;
+
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px gray;
+
+    margin-bottom: 50px;
+}
+.holes{
+    width: 100%;
+
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px
+
+}
+.hole{
+    width: auto;
+    height: 150px;
+    position: relative;
+    z-index: 5;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.hole-img{
+    width: 200px;
+    
+    position: absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    bottom: 0%;
+    z-index: 1;
+}
+#rat,
+#rat-dead{
+    width: 200px;
+    position: absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top: 1px;
+    animation: moveup 2s infinite;
+    animation-delay: 0;
+}
+#rat{
+    z-index: 0;
+}
+#rat-dead{
+    z-index: -5;
+    opacity: 0;
+}
+@keyframes moveup{
+    0% {top: 115px}
+    50% {top: -5px}
+    100% {top: 155px}
+}
+.hide{
+    display: none;
+}

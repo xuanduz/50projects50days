@@ -1,0 +1,69 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+}
+Canvas{
+    border: 2px solid blue;
+    box-sizing: border-box;
+}
+.toolbox{
+    width: 904px;
+    height: 100px;
+    background-color: rgb(70, 70, 255);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+span{
+    margin-right: 10px;
+    padding-left: 15px;
+    color: white;
+}
+input{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+input[type=text]{
+    outline: none;
+    margin-right: 15px;
+    width: 60px;
+}
+input[type=color]{
+    width: 48px;
+    height: 48px;
+    margin-left: 10px;
+}
+#submit{
+    display: none;
+}
+#clear{
+    position: absolute;
+    right: 25px;
+    height: 50px;
+    width: 80px;
+    font-size: 24px;
+}
+#eraser{
+    margin-left: 15px;
+    padding: 9px;
+    background-color: white;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.3s;
+}
+#eraser.checked{
+    background-color: rgb(185, 185, 185);
+    z-index: 3;
+}
+canvas.cursor-eraser{
+    cursor: url('eraser_small.png'), auto;
+}

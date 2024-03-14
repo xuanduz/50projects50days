@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button class="button">
+            Dark mode
+        </button>
+        <div class="clock">
+            <div class="number number1">1</div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+            <div class="clock-midpoint"></div>
+            <div class="hand hour">
+                <div class="div1"></div>
+                <div class="div2"></div>
+            </div>
+            <div class="hand minute">
+                <div class="div1"></div>
+                <div class="div2"></div>
+            </div>
+            <div class="hand second">
+                <div class="div1"></div>
+                <div class="div2"></div>
+            </div>
+        </div>
+        <div class="clock-digital">
+            <div class="clock-digital-number">
+
+            </div>
+            <div class="clock-digital-string">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const hour = document.querySelector('.hour');
+        const minute = document.querySelector('.minute');
+        const second = document.querySelector('.second');
+        const clockDigitalNumber = document.querySelector('.clock-digital-number');
+        const clockDigitalString = document.querySelector('.clock-digital-string');
+        const btn = document.querySelector('button');
+        const html = document.querySelector('html')
+
+        btn.addEventListener('click', function (e) {
+            if (btn.innerText === "Dark mode") {
+                btn.innerText = "Light mode";
+                html.classList.add('dark');
+            } else {
+                btn.innerText = "Dark mode";
+                html.classList.remove('dark');
+            }
+        })
+
+        for (var i = 1; i <= 12; i++) {
+            document.querySelector('.number' + i).style.transform = `rotate(${i * 30}deg)`;
+        }
+        var tempSc = 0;
+        setInterval(() => {
+            var d = new Date(); // for now
+            d.getHours();
+            d.getMinutes();
+            d.getSeconds();
+            if (d.getSeconds() % 60 === 0) {
+                tempSc += 60;
+            }
+            second.style.transform = `rotate(${6 * (d.getSeconds() + tempSc - 15)}deg)`;
+            minute.style.transform = `rotate(${6 * (d.getMinutes() - 15)}deg)`;
+            hour.style.transform = `rotate(${30 * (d.getHours() + (d.getMinutes()) / 60 - 15)}deg)`;
+
+            clockDigitalNumber.innerHTML = `${d.getHours()} : ${d.getMinutes()} PM`;
+            clockDigitalString.innerHTML = `${d.getDate()} / ${d.getMonth()+1} / ${d.getFullYear()}`;
+        }, 1000)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>TODOS</h1>
+            <small> Enter or click the plus sign to add <br> Click the multiplication sign to delete <br> Click the text of item to mark completed !</small>
+        </div>
+        <form id="form">
+            <div>
+                <input type="text" name="text" id="text" placeholder="Enter your todo">
+                <button type="submit" id="submit" onclick="submitText()"><i class="fas fa-plus"></i></button>
+            </div>
+            <ul class="list" id="list">
+            </ul>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

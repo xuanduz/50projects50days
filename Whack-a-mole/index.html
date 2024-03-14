@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a mole</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="game">
+            <div class="intro ">
+                <h3>Whack a mole</h3>
+                <div class="start">
+                    <button class="start-game">Start</button>
+                </div>
+            </div>
+            <div class="play hide">
+                <div class="count-down">
+                    <span id="time">Time: </span>
+                    <span id="count-down">30</span>
+                <div class="play-score">
+                    <span>Your Score: </span>
+                    <span id="play-score" style="color: #EA0B0B;">0</span>
+                </div>
+                </div>
+                <div class="holes">
+                    <div class="hole hide">
+                        <img src="img/rat-dead.png" alt="" id="rat-dead" class="rat">
+                        <img src="img/rat.png" alt="" id="rat" class="rat">
+
+                    </div>
+                    <div class="hole hole1">
+                        <img src="img/hole.png" alt="" class="hole-img">
+                    </div>
+                    <div class="hole hole2">
+                        <img src="img/hole.png" alt="" class="hole-img">
+                    </div>
+                    <div class="hole hole3">
+                        <img src="img/hole.png" alt="" class="hole-img">
+                    </div>
+                    <div class="hole hole4">
+                        <img src="img/hole.png" alt="" class="hole-img">
+                    </div>
+                    <div class="hole hole5">
+                        <img src="img/hole.png" alt="" class="hole-img">
+                    </div>
+                    <div class="hole hole6">
+                        <img src="img/hole.png" alt="" class="hole-img">
+                    </div>
+                    <div class="hole hole7">
+                        <img src="img/hole.png" alt="" class="hole-img">
+                    </div>
+                    <div class="hole hole8">
+                        <img src="img/hole.png" alt="" class="hole-img">
+                    </div>
+                    <div class="hole hole9">
+                        <img src="img/hole.png" alt="" class="hole-img">
+                    </div>
+                </div>
+            </div>
+            <div class="end hide">
+                <h3>Your Score: </h3>
+                <span id="end-score" style="color: #EA0B0B;">0</span>
+                <div class="start">
+                    <button class="start-game" id="again">Back to Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

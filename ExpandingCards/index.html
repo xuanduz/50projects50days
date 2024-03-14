@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="item-img img-active" id="1" style="background: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+                <h3>Explore the World</h3> 
+            </div>
+            <div class="item-img" id="2" style="background: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+                <h3>Wild Forest</h3> 
+            </div>
+            <div class="item-img" id="3" style="background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');">
+                <h3>Sunny Beach</h3> 
+            </div>
+            <div class="item-img" id="4" style="background: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');">
+                <h3>City on Winter</h3> 
+            </div>
+            <div class="item-img" id="5" style="background: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+                <h3>Mountains</h3> 
+            </div>
+        </div>
+    </div>
+    <script>
+        const item = document.querySelectorAll('.item-img')
+        var temp = 1;
+        item.forEach(function(i){
+            i.addEventListener('click',function(){
+                removeActive()
+                i.classList.add('img-active')
+                temp = parseInt(i.id)
+            })
+        })
+        function removeActive(){
+            item.forEach(i => {
+                i.classList.remove('img-active')
+            })
+        }
+        
+    </script>
+</body>
+</html>

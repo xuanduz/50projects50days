@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    background: url('background-study.jpg');
+    box-sizing: border-box;
+    padding-top: 80px;
+}
+.container{
+    width: 600px;
+    min-height: 500px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(149, 149, 149);
+}
+.text{
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+h1{
+    padding-top: 20px;
+    font-size: 70px;
+    color: #0041a1;
+    margin: 20px 0;
+}
+small{
+    color: #f57231;
+}
+#form{
+    width: 400px;
+    margin: 0 auto;
+}
+#form div{
+    display: flex;
+}
+#submit{
+    width: 45px;
+    height: 50px;
+    margin-left: 5px;
+    border: none;
+    background-color: rgb(81, 236, 81);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+input[type=text]{
+    width: 350px;
+    height: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+input[type=text]:focus{
+    border: 2px solid rgb(101, 101, 255);
+    box-shadow: 0 0 10px rgb(105, 105, 255);
+}
+.list{
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+}
+li{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 50px;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+}
+.item-txt{
+    transition: 0.3s;
+    width: 350px;
+    margin: 0;
+    padding-left: 10px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.completed{
+    background-color: #4488C9;
+    color: white;
+}
+#close{
+    width: 45px;
+    height: 50px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px){
+    .container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    #form{
+        width: 350px;
+    }
+}
